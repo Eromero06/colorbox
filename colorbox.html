@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/colorbox.css" rel="stylesheet">	
+<script src="jquery.3.4.1.min.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script src="js/jquery.colorbox-es.js"></script>
+<script>
+      jQuery(document).ready(function () {
+        jQuery('a.gallery').colorbox({
+			opacity:0.5 , //transparencia del fondo//
+			rel:'group1', 
+			speed: 750, // velocidad de las diapositivas//
+			slideshow: true, //activa el carrusel//
+			slideshowSpeed: 4500, // velocidad del carrusel//
+			right: "3%",
+			bottom:"3%"
+		});//Aqui cierra el script del slideshow imagenes
+		  
+		  //Funcion para el video de youtube
+		  
+		$('a.youtube').colorbox({
+			iframe: true,
+			width: "80%",
+			height:"80%"							
+		});
+		  
+		 //funcion para la web externa
+		  $('a.web').colorbox({
+			  iframe:true,
+			  width: "80%",
+			  height:"80%"
+		  });
+		  
+		  //Funcion para el html interno
+		  
+		  $('a.html').colorbox({
+			  iframe:true,
+			  width: '600px',
+			  height:'450px'
+		  });
+		  
+		  //Funcion para el div oculto
+		  $('a.oculto').colorbox({
+			  inline:true,
+			  width:'50%',
+			  height: '50%'
+		  });
+		  
+		  
+      });// Aqui cierra la funcion del color box
+    </script>
+	
+<style>
+	div#hide{
+		display: none;
+	}
+	</style>	
+	
+</head>
+
+<body>
+	<a class="gallery" href= "img/ohoopee1.jpg">
+		<img src="img/ohoopee1.jpg" width="150">
+	</a>	
+    <a class="gallery" href="img/ohoopee2.jpg">
+		<img src="img/ohoopee2.jpg" width="150">
+	</a>	
+    <a class="gallery" href="img/ohoopee3.jpg" >
+		<img src="img/ohoopee3.jpg" width="150">
+	</a>
+	<a class="youtube" href="https://www.youtube.com/embed/454cSyB-E8k">youtube</a>
+	<a class="web" href="https://es.wikipedia.org">Wikipedia</a>
+	<a class="html" href="img/ajax.html">Pagina Html</a>
+	<a class="oculto" href="#mostrar">Aviso de Privacidad</a>
+	
+	<div id="hide">
+		<div id="mostrar">
+		<h3>Aviso de Privacidad</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore expedita, enim dolorem deserunt odio odit non omnis esse nostrum similique accusamus suscipit maxime commodi, quis incidunt? In consequatur, eveniet saepe temporibus modi, numquam ut magni, itaque distinctio, similique alias labore perferendis. Vel in impedit corporis, ullam obcaecati facilis aliquam provident distinctio modi, odit, voluptas maiores dolor harum perspiciatis voluptatum? Sapiente illo nobis debitis, minima quia consequuntur inventore nihil enim earum sed corrupti. Assumenda nostrum dolore necessitatibus distinctio animi, nemo consequuntur nobis, nihil. Reiciendis enim maiores, non soluta quam reprehenderit, laborum, nostrum aliquam sequi consectetur mollitia optio cumque. Eaque, fugit.</p>
+		</div>
+	</div>
+	
+	
+</body>
+</html>
+	
+	
+	
+	
